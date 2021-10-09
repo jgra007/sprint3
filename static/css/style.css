@@ -1,0 +1,75 @@
+.container {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.body {
+    position: relative;
+    background-image: url(../images/background_3.jpg);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.prof-pic {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.cards {
+    position: absolute;
+    right: 40px;
+    top: 128px;
+    width: 1230px;
+    height: 200px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    height: 150px;
+    margin-bottom: 10px;
+    background-image: url(/static/images/fondomadera.jpg);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.card-text {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.img-dashboard {
+    position: absolute;
+    right: 40px;
+    top: 128px;
+    width: 1230px;
+    height: 600px;
+}
+
+.form {
+    position: absolute;
+    right: 40px;
+    top: 128px;
+    width: 1230px;
+    height: 600px;
+}
+
+.col-form {
+    height: 10px;
+}
