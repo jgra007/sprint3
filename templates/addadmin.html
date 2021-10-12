@@ -23,11 +23,11 @@
 
 
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="superadmin.html" class="nav-link px-2 text-secondary">Home</a></li>
+                        <li><a href="/superadmin" class="nav-link px-2 text-secondary">Inicio</a></li>
                     </ul>
 
                     <div class="text-end">
-                        <button type="button" class="btn btn-outline-light me-2">Logout</button>
+                        <button type="button" class="btn btn-outline-light me-2">Cerrar Sesion</button>
                     </div>
                 </div>
             </div>
@@ -70,42 +70,57 @@
 
         <div class="row form row-cols-1 row-cols-md-2 ">
             <div class="col-form">
-                <input type="number" class="form-control" placeholder="ID" aria-label="First name">
+                <label for="ID">ID</label>
+                <input type="number" class="form-control" name="id" placeholder="ID" aria-label="First name">
             </div>
             <div class="col-form">
-                <input type="text" class="form-control" placeholder="NOMBRES Y APELLIDOS" aria-label="Last name">
+                <label for="nombres">Nombres</label>
+                <input type="text" class="form-control" placeholder="NOMBRES" aria-label="Last name">
             </div>
             <div class="col-form">
-                <input type="number" class="form-control" placeholder="EDAD" aria-label="First name">
+                <label for="appelidos">Apellidos</label>
+                <input type="text" class="form-control" placeholder="APELLIDOS" aria-label="Last name">
             </div>
             <div class="col-form">
+                <label for="fnacimiento">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" placeholder="INGRESE FECHA" aria-label="First name">
+            </div>
+            <div class="col-form">
+                <label for="cargo">Cargo</label>
                 <input type="text" class="form-control" placeholder="CARGO" aria-label="Last name">
             </div>
             <div class="col-form">
+                <label for="tcontrato">Tipo de Contrato</label>
                 <input type="text" class="form-control" placeholder="TIPO DE CONTRATO" aria-label="First name">
             </div>
             <div class="col-form">
+                <label for="fingreso">Fecha de ingreso</label>
                 <input type="date" class="form-control" placeholder="FECHA DE INGRESO" aria-label="Last name">
             </div>
             <div class="col-form">
+                <label for="email">Email</label>
                 <input type="email" class="form-control" placeholder="CORREO" aria-label="First name">
             </div>
             <div class="col-form">
+                <label for="fterminacion">Fecha de Terminacion</label>
                 <input type="date" class="form-control" placeholder="FECHA DE TERMINACIÓN" aria-label="Last name">
             </div>
             <div class="col-form">
+                <label for="dependencia">Dependencia</label>
                 <input type="text" class="form-control" placeholder="DEPENDENCIA" aria-label="First name">
             </div>
             <div class="col-form">
+                <label for="salario">Salario</label>
                 <input type="number" class="form-control" placeholder="SALARIO" aria-label="Last name">
             </div>
             <div class="col-form">
-                <select name="Rol" class="form-control" placeholder="SALARIO" aria-label="Last name">
-                            <option value=""select>ROL DEL USUARIO</option>
+                <label for="Selecrol">Seleccionar Rol</label>
+                <select name="Rol" class="form-control" placeholder="Seleccione un Rol" aria-label="Last name">
+                        <option value=""selected>SELECCIONE UN ROL</option>
                         <option value="">Superadministrador</option>
                         <option value="">Administrador</option>
-                        <option value="">Usuario</option>
-                    </select>
+                        <option value="">Usuario</option>   
+                </select>
             </div>
             <div class="text-end">
                 <button type="submit" class="btn btn-outline-light me-2">Guardar</button>

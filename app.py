@@ -38,4 +38,18 @@ def superadmin():
 
 
 
+@app.route("/gestionar", methods=["GET", "POST"])
+def gestionar():
+    return render_template("gestionar.html")
+
+@app.route("/addadmin", methods=["GET", "POST"])
+def addadmin():
+    return render_template("addadmin.html")
+
+
+@app.route("/dashboard", methods=["GET", "POST"])
+def dashboard():
+    return render_template("dashboard.html")
+
+
 

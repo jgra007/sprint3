@@ -57,9 +57,9 @@
 .img-dashboard {
     position: absolute;
     right: 40px;
-    top: 128px;
+    top: 100px;
     width: 1230px;
-    height: 600px;
+    height: 620px;
 }
 
 .form {
@@ -72,4 +72,8 @@
 
 .col-form {
     height: 10px;
+}
+
+.sadminbtn {
+    color: black;
 }
