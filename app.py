@@ -32,9 +32,10 @@ def superadmin():
 
             return redirect(url_for("login"))
 
-        
-
     return render_template("superadmin.html")
+
+
+    
 
 
 
@@ -42,14 +43,100 @@ def superadmin():
 def gestionar():
     return render_template("gestionar.html")
 
-@app.route("/addadmin", methods=["GET", "POST"])
-def addadmin():
-    return render_template("addadmin.html")
+
+@app.route("/adduser", methods=["GET","POST"])
+def adduser():
+    if request.method == "POST":
+        fname = request.form["fname"]
+        lname = request.form["lname"]
+        id = request.form["id"]
+        fnacimiento = request.form["fnacimiento"]
+        cargo = request.form["cargo"]
+        tcontrato = request.form["tcontrato"]
+        fingreso = request.form["fingreso"]
+        email = request.form["email"]
+        fterminacion = request.form["fterminacion"]
+        dependencia = request.form["dependencia"]
+        salario = request.form["salario"]
+        rol = request.form["rol"]
+        
+
+        if not id:
+            error = "Debes Ingresar El ID"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not fname:
+            error = "Debes Ingresar El Nombre"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not lname:
+            error = "Debes Ingresar El Apellido"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not fnacimiento:
+            error = "Debes Ingresar Fecha de Nacimiento"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not cargo:
+            error = "Debes Ingresar El Cargo"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not tcontrato:
+            error = "Debes Ingresar Tipo de Contrato"
+            flash(error)
+            return redirect(url_for("adduser"))
+        
+        if not fingreso:
+            error = "Debes Ingresar Fecha de Ingreso"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not email:
+            error = "Debes Ingresar Email"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+
+        if not fterminacion:
+            error = "Debes Ingresar Fecha de Terminacion"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not dependencia:
+            error = "Debes Ingresar Dependencia"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not salario:
+            error = "Debes Ingresar Salario"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+        if not rol:
+            error = "Debes Ingresar Rol"
+            flash(error)
+            return redirect(url_for("adduser"))
+
+
+        flash("Usuario Creado Exitosamente")            
+
+    return render_template("empleados.html")
+
+
 
 
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
     return render_template("dashboard.html")
+
+@app.route("/registeruser", methods=["GET", "POST"])
+def registeruser():
+    return render_template("empleados.html")
 
 
 
