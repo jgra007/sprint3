@@ -126,6 +126,9 @@ def adduser():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/pruebas") 
+def pruebas(): 
+  return render_template("pruebas.html")
 
 @app.route("/registeruser", methods=["GET", "POST"])
 def registeruser():
