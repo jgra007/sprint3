@@ -74,64 +74,126 @@
 
 
         <form action="{{url_for('adduser')}}" method='POST'>
-            <div class="row forma ">
-                <div class="col-6">
-                    <label for="nombres">Nombres</label>
-                    <input name="fname" type="text" class="form-control" placeholder="NOMBRES" aria-label="Last name">
-                </div>
-                <div class="col-6">
-                    <label for="appelidos">Apellidos</label>
-                    <input name="lname" type="text" class="form-control" placeholder="APELLIDOS" aria-label="Last name">
-                </div>
-                <div class="col-6">
-                    <label for="ID">ID</label>
-                    <input type="number" class="form-control" name="id" placeholder="ID" aria-label="First name">
-                </div>
-                <div class="col-6">
-                    <label for="fnacimiento">Fecha de Nacimiento</label>
-                    <input name="fnacimiento" type="date" class="form-control" placeholder="INGRESE FECHA" aria-label="First name">
-                </div>
-                <div class="col-6">
-                    <label for="cargo">Cargo</label>
-                    <input name="cargo" type="text" class="form-control" placeholder="CARGO" aria-label="Last name">
-                </div>
-                <div class="col-6">
-                    <label for="tcontrato">Tipo de Contrato</label>
-                    <input name="tcontrato" type="text" class="form-control" placeholder="TIPO DE CONTRATO" aria-label="First name">
-                </div>
-                <div class="col-6">
-                    <label for="fingreso">Fecha de ingreso</label>
-                    <input name="fingreso" type="date" class="form-control" placeholder="FECHA DE INGRESO" aria-label="Last name">
-                </div>
-                <div class="col-6">
-                    <label for="email">Email</label>
-                    <input name="email" type="email" class="form-control" placeholder="CORREO" aria-label="First name">
-                </div>
-                <div class="col-6">
-                    <label for="fterminacion">Fecha de Terminacion</label>
-                    <input name="fterminacion" type="date" class="form-control" placeholder="FECHA DE TERMINACIÓN" aria-label="Last name">
-                </div>
-                <div class="col-6">
-                    <label for="dependencia">Dependencia</label>
-                    <input name="dependencia" type="text" class="form-control" placeholder="DEPENDENCIA" aria-label="First name">
-                </div>
-                <div class="col-6">
-                    <label for="salario">Salario</label>
-                    <input name="salario" type="number" class="form-control" placeholder="SALARIO" aria-label="Last name">
-                </div>
-                <div class="col-6">
-                    <label for="Selecrol">Seleccionar Rol</label>
-                    <select name="rol" class="form-control" placeholder="Seleccione un Rol" aria-label="Last name">
-                            <option value=""selected>SELECCIONE UN ROL</option>
-                            <option value="">Superadministrador</option>
-                            <option value="">Administrador</option>
-                            <option value="">Usuario</option>   
-                </select>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Guardar</button>
+            <div class="row form-gestionar border border-3">
+                <div class="row nav-busq"></div>
 
+                <div class="col-5">
+                    <label for="Consultar1">Consultar por</label>
+                    <select class="form-select" aria-label="Default select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">ID</option>
+                                <option value="2">Nombre</option>
+                                <option value="3">Apellido</option>
+                                <option value="3">Cargo</option>
+                                <option value="3">Dependencia</option>
+                            </select>
+                </div>
+                <div class="col-5">
+                    <label for="Consultar1">Criterio de Busqueda</label>
+                    <input type="text" class="form-select" aria-label="Default select example">
+
+                    </input>
+                </div>
+                <div class="col-1 d-flex align-items-center">
+                    <img src="../static/images/buscar.png" class="iconbusq">
+                </div>
             </div>
-        </form>
+    </div>
+
+
+
+    </div>
+
+    <div>
+        <div class="table1">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">F-Name</th>
+                        <th scope="col">L-Name</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Cargo</th>
+                        <th scope="col d-flex justify-content-center">Dependencia</th>
+                        <th scope="col">ver</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Elimianr</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scope="row">001</th>
+                        <td>Camilo</td>
+                        <td>Noguera</td>
+                        <td>17</td>
+                        <td>Desarrollador Frontend</td>
+                        <td>Desarrolo-Web</td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">002</th>
+                        <td>Jose</td>
+                        <td>Ramirez</td>
+                        <td>35</td>
+                        <td>Diseñador-UI-UX</td>
+                        <td>Diseño-Web</td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">003</th>
+                        <td>Yuris</td>
+                        <td>Reyes</td>
+                        <td>39</td>
+                        <td>Desarrollador Backend</td>
+                        <td>Desarrolo-Web</td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">004</th>
+                        <td>Raul</td>
+                        <td>Figueroa</td>
+                        <td>36</td>
+                        <td>Desarrollador Frontend</td>
+                        <td>Desarrolo-Web</td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">005</th>
+                        <td>Olga</td>
+                        <td>Guevara</td>
+                        <td>35</td>
+                        <td>Desarrollador Frontend</td>
+                        <td>Desarrolo-Web</td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
+                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="row svbtn border border-3 ">
+
+            <div class="d-flex justify-content-center ">
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Guardar</button>
+            </div>
+
+        </div>
+
+
+
+
+
+
 
 
 

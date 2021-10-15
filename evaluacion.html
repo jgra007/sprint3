@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+</head>
+
+<body>
+    <div class="body">
+        <header class="p-3 bg-dark text-white" style="border-radius: 10px;">
+            <div class="container">
+
+                <div class="nav-tab d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" width=100%>
+                    <img src="../static/images/logo2.jpeg" width=50px height=50px>
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"><svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg></a>
+
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="/superadmin" class="nav-link px-2 text-secondary">Inicio</a></li>
+                    </ul>
+
+                    <div class="text-end">
+                        <button type="button" class="btn btn-outline-light me-2">Cerrar Sesion</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="sidebar d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 250px; height:100%; position: fixed;border-radius: 10px; margin-top:15px;">
+            <img class="prof-pic" src="../static/images/foto.jpg">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto align-items-center">
+                <li class="nav-item">
+                    <a>Camilo Noguera</a>
+                </li>
+                <li class="nav-item">
+                    <a>Super Administrador</a>
+                </li>
+                <li class="nav-item">
+                    <a>17 años</a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <strong>mdo</strong>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div>
+
+
+
+
+
+        <div class="main-block">
+            <form action="/">
+                <h1>Evaluación de Empleados</h1>
+                <h4>DEPENDENCIA</h4>
+                <input type="text" />
+                <h4>NOMBRE DEL EMPLEADO</h4>
+                <input type="text" />
+                <h4>FECHA DE EVALUACIÓN</h4>
+                <input type="date" />
+                <h5>Cumplimiento de objetivos</h5>
+                <div>
+                    <h4></h4>
+                    <table>
+                        <tr>
+                            <th class="first-col"></th>
+                            <th>En total desacuerdo</th>
+                            <th>Desacuerdo</th>
+                            <th>Neutral</th>
+                            <th>De acuerdo</th>
+                            <th>Totalmente de acuerdo</th>
+                        </tr>
+                        <tr>
+                            <td class="first-col">1. El empleado logró los objetivos trazados desde la última evaluación.</td>
+                            <td><input type="radio" value="none" name="interes" /></td>
+                            <td><input type="radio" value="none" name="interes" /></td>
+                            <td><input type="radio" value="none" name="interes" /></td>
+                            <td><input type="radio" value="none" name="interes" /></td>
+                            <td><input type="radio" value="none" name="interes" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">2. El empleado cumple con los horarios de trabajo.</td>
+                            <td><input type="radio" value="none" name="horario" /></td>
+                            <td><input type="radio" value="none" name="horario" /></td>
+                            <td><input type="radio" value="none" name="horario" /></td>
+                            <td><input type="radio" value="none" name="horario" /></td>
+                            <td><input type="radio" value="none" name="horario" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">3. El empleado hace sus entregas en forma organizada.</td>
+                            <td><input type="radio" value="none" name="organizacion" /></td>
+                            <td><input type="radio" value="none" name="organizacion" /></td>
+                            <td><input type="radio" value="none" name="organizacion" /></td>
+                            <td><input type="radio" value="none" name="organizacion" /></td>
+                            <td><input type="radio" value="none" name="organizacion" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">4. El empleado se interesa por colaborar con el equipo.</td>
+                            <td><input type="radio" value="none" name="colaboracion" /></td>
+                            <td><input type="radio" value="none" name="colaboracion" /></td>
+                            <td><input type="radio" value="none" name="colaboracion" /></td>
+                            <td><input type="radio" value="none" name="colaboracion" /></td>
+                            <td><input type="radio" value="none" name="colaboracion" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">5. El empleado demuestra conocimiento de sus labores.</td>
+                            <td><input type="radio" value="none" name="conocimiento" /></td>
+                            <td><input type="radio" value="none" name="conocimiento" /></td>
+                            <td><input type="radio" value="none" name="conocimiento" /></td>
+                            <td><input type="radio" value="none" name="conocimiento" /></td>
+                            <td><input type="radio" value="none" name="conocimiento" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">6. El empleado se muestra motivado con su trabajo.</td>
+                            <td><input type="radio" value="none" name="motivacion" /></td>
+                            <td><input type="radio" value="none" name="motivacion" /></td>
+                            <td><input type="radio" value="none" name="motivacion" /></td>
+                            <td><input type="radio" value="none" name="motivacion" /></td>
+                            <td><input type="radio" value="none" name="motivacion" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">7. El empleado muestra interés de capacitarse.</td>
+                            <td><input type="radio" value="none" name="capacitacion" /></td>
+                            <td><input type="radio" value="none" name="capacitacion" /></td>
+                            <td><input type="radio" value="none" name="capacitacion" /></td>
+                            <td><input type="radio" value="none" name="capacitacion" /></td>
+                            <td><input type="radio" value="none" name="capacitacion" /></td>
+                        </tr>
+                        <tr>
+                            <td class="first-col">8. El empleado demuestra interés en ascender dentro de la organización.</td>
+                            <td><input type="radio" value="none" name="promocion" /></td>
+                            <td><input type="radio" value="none" name="promocion" /></td>
+                            <td><input type="radio" value="none" name="promocion" /></td>
+                            <td><input type="radio" value="none" name="promocion" /></td>
+                            <td><input type="radio" value="none" name="promocion" /></td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="question">9. ¿El empleado participa en las actividades lúdicas de la organización?</p>
+                <div class="question-answer">
+                    <label><input type="radio" value="none" name="accesible" /> Sí</label>
+                    <label><input type="radio" value="none" name="accesible" /> No</label>
+                </div>
+                <p class="question">10. ¿El empleado participa en comités de bienestar?</p>
+                <div class="question-answer">
+                    <label><input type="radio" value="none" name="activo" /> Sí</label>
+                    <label><input type="radio" value="none" name="activo" /> No</label>
+                </div>
+
+                <h5>Comentarios en fortalezas y aspectos a mejorar</h5>
+                <p class="comments">Recomendaciones al empleado sobre su desempeño.</p>
+                <textarea rows="5"></textarea>
+                <p class="comments">Fortalezas del empleado.</p>
+                <textarea rows="5"></textarea>
+                <p class="comments">Áreas a mejorar.</p>
+                <textarea rows="5"></textarea>
+                <p class="comments">Calificación general en escala de uno a diez.</p>
+                <textarea rows="5"></textarea>
+                <div class="btn-block">
+                    <button type="submit" href="/">Enviar</button>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+        -->
+</body>
+
+</html>
