@@ -27,7 +27,7 @@
 
 
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="/superadmin" class="nav-link px-2 text-secondary">Inicio</a></li>
+                        <li><a href="/sessionsuperadmin" class="nav-link px-2 text-secondary">Inicio</a></li>
                     </ul>
 
                     <div class="text-end">
@@ -61,13 +61,13 @@
                     <strong>mdo</strong>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Nuevo Proyecto...</a></li>
+                    <li><a class="dropdown-item" href="#">Opciones</a></li>
+                    <li><a class="dropdown-item" href="#">Perfil</a></li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
                 </ul>
             </div>
         </div>
@@ -78,19 +78,19 @@
                 <div class="row nav-busq"></div>
 
                 <div class="col-5">
-                    <label for="Consultar1">Consultar por</label>
-                    <select class="form-select" aria-label="Default select example">
-                                <option selected>Open this select menu</option>
+                    <label for="ConsultarPor">Consultar Por</label>
+                    <select class="form-select" aria-label="consultarpor">
+                                <option selected>Seleccione el Campo a Consultar</option>
                                 <option value="1">ID</option>
-                                <option value="2">Nombre</option>
-                                <option value="3">Apellido</option>
+                                <option value="2">Nombres</option>
+                                <option value="3">Apellidos</option>
                                 <option value="3">Cargo</option>
                                 <option value="3">Dependencia</option>
                             </select>
                 </div>
                 <div class="col-5">
-                    <label for="Consultar1">Criterio de Busqueda</label>
-                    <input type="text" class="form-select" aria-label="Default select example">
+                    <label for="CriterioB">Criterio de Búsqueda</label>
+                    <input type="text" name="searchcriteria">
 
                     </input>
                 </div>
@@ -110,14 +110,14 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">F-Name</th>
-                        <th scope="col">L-Name</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
                         <th scope="col">Edad</th>
                         <th scope="col">Cargo</th>
                         <th scope="col d-flex justify-content-center">Dependencia</th>
-                        <th scope="col">ver</th>
+                        <th scope="col">Ver</th>
                         <th scope="col">Editar</th>
-                        <th scope="col">Elimianr</th>
+                        <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -128,9 +128,9 @@
                         <td>17</td>
                         <td>Desarrollador Frontend</td>
                         <td>Desarrolo-Web</td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                        <td class="iconcont"><a href="\infouser"><img class="menuicon" src="../static/images/search1jpeg"></a></td>
+                        <td class="iconcont"><a href="\edituser"><img class="menuicon" src="../static/images/edit1.jpeg"></a></td>
+                        <td class="iconcont"><a href="\deleteuser"><img class="menuicon" src="../static/images/delete1.jpeg"></a></td>
                     </tr>
                     <tr>
                         <th scope="row">002</th>
@@ -139,9 +139,9 @@
                         <td>35</td>
                         <td>Diseñador-UI-UX</td>
                         <td>Diseño-Web</td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                        <td class="iconcont"><a href="\infouser"><img class="menuicon" src="../static/images/search1jpeg"></a></td>
+                        <td class="iconcont"><a href="\edituser"><img class="menuicon" src="../static/images/edit1.jpeg"></a></td>
+                        <td class="iconcont"><a href="\deleteuser"><img class="menuicon" src="../static/images/delete1.jpeg"></a></td>
                     </tr>
                     <tr>
                         <th scope="row">003</th>
@@ -150,9 +150,10 @@
                         <td>39</td>
                         <td>Desarrollador Backend</td>
                         <td>Desarrolo-Web</td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+            
+                        <td class="iconcont"><a href="\infouser"><img class="menuicon" src="../static/images/search1jpeg"></a></td>
+                        <td class="iconcont"><a href="\edituser"><img class="menuicon" src="../static/images/edit1.jpeg"></a></td>
+                        <td class="iconcont"><a href="\deleteuser"><img class="menuicon" src="../static/images/delete1.jpeg"></a></td>
                     </tr>
                     <tr>
                         <th scope="row">004</th>
@@ -161,9 +162,9 @@
                         <td>36</td>
                         <td>Desarrollador Frontend</td>
                         <td>Desarrolo-Web</td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                        <td class="iconcont"><a href="\infouser"><img class="menuicon" src="../static/images/search1jpeg"></a></td>
+                        <td class="iconcont"><a href="\edituser"><img class="menuicon" src="../static/images/edit1.jpeg"></a></td>
+                        <td class="iconcont"><a href="\deleteuser"><img class="menuicon" src="../static/images/delete1.jpeg"></a></td>
                     </tr>
                     <tr>
                         <th scope="row">005</th>
@@ -172,9 +173,9 @@
                         <td>35</td>
                         <td>Desarrollador Frontend</td>
                         <td>Desarrolo-Web</td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/search1jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/edit1.jpeg"></td>
-                        <td class="iconcont"><img class="menuicon" src="../static/images/delete1.jpeg"></td>
+                        <td class="iconcont"><a href="\infouser"><img class="menuicon" src="../static/images/search1jpeg"></a></td>
+                        <td class="iconcont"><a href="\edituser"><img class="menuicon" src="../static/images/edit1.jpeg"></a></td>
+                        <td class="iconcont"><a href="\deleteuser"><img class="menuicon" src="../static/images/delete1.jpeg"></a></td>
                     </tr>
                 </tbody>
             </table>

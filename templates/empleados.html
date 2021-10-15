@@ -27,7 +27,7 @@
 
 
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="/superadmin" class="nav-link px-2 text-secondary">Inicio</a></li>
+                        <li><a href="/sessionsuperadmin" class="nav-link px-2 text-secondary">Inicio</a></li>
                     </ul>
 
                     <div class="text-end">
@@ -77,55 +77,55 @@
             <div class="row forma ">
                 <div class="col-6">
                     <label for="nombres">Nombres</label>
-                    <input name="fname" type="text" class="form-control" placeholder="NOMBRES" aria-label="Last name">
+                    <input name="fname" type="text" class="form-control" placeholder="NOMBRES" aria-label="nombres">
                 </div>
                 <div class="col-6">
                     <label for="appelidos">Apellidos</label>
-                    <input name="lname" type="text" class="form-control" placeholder="APELLIDOS" aria-label="Last name">
+                    <input name="lname" type="text" class="form-control" placeholder="APELLIDOS" aria-label="apellidos">
                 </div>
                 <div class="col-6">
                     <label for="ID">ID</label>
-                    <input type="number" class="form-control" name="id" placeholder="ID" aria-label="First name">
+                    <input type="number" class="form-control" name="id" placeholder="ID" aria-label="ID">
                 </div>
                 <div class="col-6">
                     <label for="fnacimiento">Fecha de Nacimiento</label>
-                    <input name="fnacimiento" type="date" class="form-control" placeholder="INGRESE FECHA" aria-label="First name">
+                    <input name="fnacimiento" type="date" class="form-control" aria-label="fechanac">
                 </div>
                 <div class="col-6">
                     <label for="cargo">Cargo</label>
-                    <input name="cargo" type="text" class="form-control" placeholder="CARGO" aria-label="Last name">
+                    <input name="cargo" type="text" class="form-control" placeholder="CARGO" aria-label="cargo">
                 </div>
                 <div class="col-6">
                     <label for="tcontrato">Tipo de Contrato</label>
-                    <input name="tcontrato" type="text" class="form-control" placeholder="TIPO DE CONTRATO" aria-label="First name">
+                    <input name="tcontrato" type="text" class="form-control" placeholder="TIPO DE CONTRATO" aria-label="tipocont">
                 </div>
                 <div class="col-6">
-                    <label for="fingreso">Fecha de ingreso</label>
-                    <input name="fingreso" type="date" class="form-control" placeholder="FECHA DE INGRESO" aria-label="Last name">
+                    <label for="fingreso">Fecha de Ingreso</label>
+                    <input name="fingreso" type="date" class="form-control" placeholder="FECHA DE INGRESO" aria-label="fechaing">
                 </div>
                 <div class="col-6">
-                    <label for="email">Email</label>
-                    <input name="email" type="email" class="form-control" placeholder="CORREO" aria-label="First name">
+                    <label for="email">Correo</label>
+                    <input name="email" type="email" class="form-control" placeholder="CORREO" aria-label="correo">
                 </div>
                 <div class="col-6">
-                    <label for="fterminacion">Fecha de Terminacion</label>
-                    <input name="fterminacion" type="date" class="form-control" placeholder="FECHA DE TERMINACIÓN" aria-label="Last name">
+                    <label for="fterminacion">Fecha de Terminación</label>
+                    <input name="fterminacion" type="date" class="form-control" placeholder="FECHA DE TERMINACIÓN" aria-label="fechaterm">
                 </div>
                 <div class="col-6">
                     <label for="dependencia">Dependencia</label>
-                    <input name="dependencia" type="text" class="form-control" placeholder="DEPENDENCIA" aria-label="First name">
+                    <input name="dependencia" type="text" class="form-control" placeholder="DEPENDENCIA" aria-label="dependencia">
                 </div>
                 <div class="col-6">
                     <label for="salario">Salario</label>
-                    <input name="salario" type="number" class="form-control" placeholder="SALARIO" aria-label="Last name">
+                    <input name="salario" type="number" class="form-control" placeholder="SALARIO" aria-label="salario">
                 </div>
                 <div class="col-6">
                     <label for="Selecrol">Seleccionar Rol</label>
-                    <select name="rol" class="form-control" placeholder="Seleccione un Rol" aria-label="Last name">
-                            <option value=""selected>SELECCIONE UN ROL</option>
-                            <option value="">Superadministrador</option>
-                            <option value="">Administrador</option>
-                            <option value="">Usuario</option>   
+                    <select name="rol" id="rol" class="form-select" aria-label="rolusuario" Required>
+                            <option value="1" Selected>Usuario</option>   
+                            <option value="2">Administrador</option>
+                            <option value="3">Superadministrador</option>
+                            
                 </select>
                 </div>
                 <button class="w-100 btn btn-lg btn-primary" type="submit">Guardar</button>

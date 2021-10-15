@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 
-
 app = Flask(__name__)
 app.secret_key = "mysecretkey"
 
@@ -9,8 +8,9 @@ app.secret_key = "mysecretkey"
 def login():
     return render_template("login.html")
 
-@app.route("/superadmin", methods=["GET","POST"])
-def superadmin():
+
+@app.route("/sessionsuperadmin", methods=["GET", "POST"])
+def sessionsuperadmin():
     if request.method == "POST":
         user = request.form["user"]
         password = request.form["password"]
@@ -35,16 +35,12 @@ def superadmin():
     return render_template("superadmin.html")
 
 
-    
-
-
-
-@app.route("/gestionar", methods=["GET", "POST"])
-def gestionar():
+@app.route("/manageuser", methods=["GET", "POST"])
+def manageuser():
     return render_template("gestionar.html")
 
 
-@app.route("/adduser", methods=["GET","POST"])
+@app.route("/adduser", methods=["GET", "POST"])
 def adduser():
     if request.method == "POST":
         fname = request.form["fname"]
@@ -59,7 +55,6 @@ def adduser():
         dependencia = request.form["dependencia"]
         salario = request.form["salario"]
         rol = request.form["rol"]
-        
 
         if not id:
             error = "Debes Ingresar El ID"
@@ -90,7 +85,7 @@ def adduser():
             error = "Debes Ingresar Tipo de Contrato"
             flash(error)
             return redirect(url_for("adduser"))
-        
+
         if not fingreso:
             error = "Debes Ingresar Fecha de Ingreso"
             flash(error)
@@ -100,7 +95,6 @@ def adduser():
             error = "Debes Ingresar Email"
             flash(error)
             return redirect(url_for("adduser"))
-
 
         if not fterminacion:
             error = "Debes Ingresar Fecha de Terminacion"
@@ -122,21 +116,37 @@ def adduser():
             flash(error)
             return redirect(url_for("adduser"))
 
-
-        flash("Usuario Creado Exitosamente")            
+        flash("Usuario Creado Exitosamente")
+        return redirect(url_for("adduser"))
 
     return render_template("empleados.html")
-
-
 
 
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
     return render_template("dashboard.html")
 
+
 @app.route("/registeruser", methods=["GET", "POST"])
 def registeruser():
     return render_template("empleados.html")
 
 
+@app.route("/evaluationuser", methods=["GET", "POST"])
+def evaluationuser():
+    return render_template("evaluacion.html")
 
+
+@app.route("/infouser", methods=["GET", "POST"])
+def infouser():
+    return "Información del Usuario"
+
+
+@app.route("/edituser", methods=["GET", "POST"])
+def edituser():
+    return "Usuario Editado Correctamente"
+
+
+@app.route("/deleteuser", methods=["GET", "POST"])
+def deleteuser():
+    return "Usuario Eliminado Correctamente"

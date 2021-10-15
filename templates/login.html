@@ -45,26 +45,26 @@
 
 
         <div class="login d-flex justify-content-center mt-5">
-            <form action="{{url_for('superadmin')}}" method='POST'>
+            <form action="{{url_for('sessionsuperadmin')}}" method='POST'>
 
-                <h1 class="h3 mb-3 fw-normal">Inicias Sesion</h1>
+                <h1 class="h3 mb-3 fw-normal">Iniciar Sesión</h1>
 
                 <div class="form-floating">
-                    <input type="user" class="form-control" id="user" name="user" placeholder="Usuario">
+                    <input type="user" class="form-control" id="user" name="user" value="Prueba">
                     <label for="floatingInput">Usuario</label>
                 </div>
                 <br>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="Password" name="password" placeholder="Contraseña" required>
+                    <input type="password" class="form-control" id="Password" name="password" value="Prueba123" required>
                     <label for="floatingPassword">Contraseña</label>
                 </div>
                 <br>
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" value="remember-me"> Recordarme</input>
+                        <input type="checkbox" value="remember-me">Recordarme</input>
                     </label>
                 </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesion</button>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar Sesión</button>
 
             </form>
         </div>
