@@ -30,6 +30,7 @@
   border-radius: 10px;
   margin: 10px;
   width: 80%;
+  margin-left: 13rem;
 }
 
 .fila {
@@ -84,6 +85,7 @@ button:hover {
     max-width: 100%;
     width: 60%;
     border-radius: 10px;
+    margin-left: 2rem;
   }
   #sidebar {
     margin-left: -17rem;
@@ -99,4 +101,11 @@ button:hover {
     margin-left: 17rem;
     width: calc(100% - 17rem);
   }
+  .cards-rounded {
+    border-radius: 10px;
+    margin: 10px;
+    width: 80%;
+    margin-left: 2rem;
+  }
+  
 }
