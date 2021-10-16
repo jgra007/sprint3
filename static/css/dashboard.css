@@ -98,7 +98,7 @@ button:hover {
     margin: 0;
   }
   #content.active {
-    margin-left: 17rem;
+    margin-left: 15rem;
     width: calc(100% - 17rem);
   }
   .cards-rounded {
