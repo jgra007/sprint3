@@ -7,7 +7,7 @@ app.secret_key = "mysecretkey"
 @app.route("/")
 def login():
     return render_template("login.html")
-
+   
 
 @app.route("/sessionsuperadmin", methods=["GET", "POST"])
 def sessionsuperadmin():
@@ -37,7 +37,7 @@ def sessionsuperadmin():
 
 @app.route("/manageuser", methods=["GET", "POST"])
 def manageuser():
-    return render_template("gestionar.html")
+    return render_template("gestionar.html") 
 
 
 @app.route("/adduser", methods=["GET", "POST"])
