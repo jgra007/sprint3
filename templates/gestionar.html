@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../static/css/dashboard.css" />
-    <link rel="stylesheet" href="../static/css/gestionar.css" />
+    <link rel="stylesheet" href="../static/css/style.css" />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -69,184 +69,206 @@
         </center>
       </div>
       <br />
-      <div class="container">
+      <div class="container-fluid">
         <form action="{{url_for('adduser')}}" method="POST">
-          <div class="row border border-3">
-            <div class="row nav-busq"></div>
+          <center>
+            <div class="row border">
+              <div class="row nav-busq"></div>
 
-            <div class="col-5">
-              <label for="ConsultarPor">Consultar Por</label>
-              <select class="form-select" aria-label="consultarpor">
-                <option selected>Seleccione el Campo a Consultar</option>
-                <option value="1">ID</option>
-                <option value="2">Nombres</option>
-                <option value="3">Apellidos</option>
-                <option value="3">Cargo</option>
-                <option value="3">Dependencia</option>
-              </select>
+              <div class="col-5">
+                <label for="ConsultarPor">Consultar Por</label>
+                <select class="form-select" aria-label="consultarpor">
+                  <option selected>Seleccione el Campo a Consultar</option>
+                  <option value="1">ID</option>
+                  <option value="2">Nombres</option>
+                  <option value="3">Apellidos</option>
+                  <option value="3">Cargo</option>
+                  <option value="3">Dependencia</option>
+                </select>
+              </div>
+              <div class="col-5">
+                <label for="CriterioB">Criterio de Búsqueda</label>
+                <input type="text" name="searchcriteria" />
+              </div>
+              <div class="col-1 d-flex align-items-center">
+                <img src="../static/images/buscar.png" class="iconbusq" />
+              </div>
             </div>
-            <div class="col-5">
-              <label for="CriterioB">Criterio de Búsqueda</label>
-              <input type="text" name="searchcriteria" />
-            </div>
-            <div class="col-1 d-flex align-items-center">
-              <img src="../static/images/buscar.png" class="iconbusq" />
-            </div>
-          </div>
+            <br /><br />
+            <div class="table1">
+              <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col d-flex justify-content-center">
+                      Dependencia
+                    </th>
+                    <th scope="col">Ver</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="table-active">
+                    <th scope="row">001</th>
+                    <td>Camilo</td>
+                    <td>Noguera</td>
+                    <td>17</td>
+                    <td>Desarrollador Frontend</td>
+                    <td>Desarrolo-Web</td>
+                    <td class="iconcont">
+                      <a href="\infouser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/search1jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\edituser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/edit1.jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\deleteuser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/delete1.jpeg"
+                      /></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">002</th>
+                    <td>Jose</td>
+                    <td>Ramirez</td>
+                    <td>35</td>
+                    <td>Diseñador-UI-UX</td>
+                    <td>Diseño-Web</td>
+                    <td class="iconcont">
+                      <a href="\infouser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/search1jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\edituser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/edit1.jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\deleteuser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/delete1.jpeg"
+                      /></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">003</th>
+                    <td>Yuris</td>
+                    <td>Reyes</td>
+                    <td>39</td>
+                    <td>Desarrollador Backend</td>
+                    <td>Desarrolo-Web</td>
 
-          <div class="table1">
-            <table class="table table-dark">
-              <thead>
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Nombres</th>
-                  <th scope="col">Apellidos</th>
-                  <th scope="col">Edad</th>
-                  <th scope="col">Cargo</th>
-                  <th scope="col d-flex justify-content-center">Dependencia</th>
-                  <th scope="col">Ver</th>
-                  <th scope="col">Editar</th>
-                  <th scope="col">Eliminar</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table-active">
-                  <th scope="row">001</th>
-                  <td>Camilo</td>
-                  <td>Noguera</td>
-                  <td>17</td>
-                  <td>Desarrollador Frontend</td>
-                  <td>Desarrolo-Web</td>
-                  <td class="iconcont">
-                    <a href="\infouser"
-                      ><img class="menuicon" src="../static/images/search1jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\edituser"
-                      ><img class="menuicon" src="../static/images/edit1.jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\deleteuser"
-                      ><img
-                        class="menuicon"
-                        src="../static/images/delete1.jpeg"
-                    /></a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">002</th>
-                  <td>Jose</td>
-                  <td>Ramirez</td>
-                  <td>35</td>
-                  <td>Diseñador-UI-UX</td>
-                  <td>Diseño-Web</td>
-                  <td class="iconcont">
-                    <a href="\infouser"
-                      ><img class="menuicon" src="../static/images/search1jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\edituser"
-                      ><img class="menuicon" src="../static/images/edit1.jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\deleteuser"
-                      ><img
-                        class="menuicon"
-                        src="../static/images/delete1.jpeg"
-                    /></a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">003</th>
-                  <td>Yuris</td>
-                  <td>Reyes</td>
-                  <td>39</td>
-                  <td>Desarrollador Backend</td>
-                  <td>Desarrolo-Web</td>
-
-                  <td class="iconcont">
-                    <a href="\infouser"
-                      ><img class="menuicon" src="../static/images/search1jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\edituser"
-                      ><img class="menuicon" src="../static/images/edit1.jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\deleteuser"
-                      ><img
-                        class="menuicon"
-                        src="../static/images/delete1.jpeg"
-                    /></a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">004</th>
-                  <td>Raul</td>
-                  <td>Figueroa</td>
-                  <td>36</td>
-                  <td>Desarrollador Frontend</td>
-                  <td>Desarrolo-Web</td>
-                  <td class="iconcont">
-                    <a href="\infouser"
-                      ><img class="menuicon" src="../static/images/search1jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\edituser"
-                      ><img class="menuicon" src="../static/images/edit1.jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\deleteuser"
-                      ><img
-                        class="menuicon"
-                        src="../static/images/delete1.jpeg"
-                    /></a>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">005</th>
-                  <td>Olga</td>
-                  <td>Guevara</td>
-                  <td>35</td>
-                  <td>Desarrollador Frontend</td>
-                  <td>Desarrolo-Web</td>
-                  <td class="iconcont">
-                    <a href="\infouser"
-                      ><img class="menuicon" src="../static/images/search1jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\edituser"
-                      ><img class="menuicon" src="../static/images/edit1.jpeg"
-                    /></a>
-                  </td>
-                  <td class="iconcont">
-                    <a href="\deleteuser"
-                      ><img
-                        class="menuicon"
-                        src="../static/images/delete1.jpeg"
-                    /></a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="row svbtn border border-3">
-            <div class="d-flex justify-content-center">
-              <button class="w-100 btn btn-lg btn-primary" type="submit">
-                Guardar
-              </button>
+                    <td class="iconcont">
+                      <a href="\infouser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/search1jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\edituser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/edit1.jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\deleteuser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/delete1.jpeg"
+                      /></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">004</th>
+                    <td>Raul</td>
+                    <td>Figueroa</td>
+                    <td>36</td>
+                    <td>Desarrollador Frontend</td>
+                    <td>Desarrolo-Web</td>
+                    <td class="iconcont">
+                      <a href="\infouser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/search1jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\edituser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/edit1.jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\deleteuser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/delete1.jpeg"
+                      /></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">005</th>
+                    <td>Olga</td>
+                    <td>Guevara</td>
+                    <td>35</td>
+                    <td>Desarrollador Frontend</td>
+                    <td>Desarrolo-Web</td>
+                    <td class="iconcont">
+                      <a href="\infouser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/search1jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\edituser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/edit1.jpeg"
+                      /></a>
+                    </td>
+                    <td class="iconcont">
+                      <a href="\deleteuser"
+                        ><img
+                          class="menuicon"
+                          src="../static/images/delete1.jpeg"
+                      /></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
+
+            <div class="row">
+              <div class="container">
+                <button class="" type="submit">Guardar</button>
+              </div>
+            </div>
+          </center>
         </form>
       </div>
     </div>
