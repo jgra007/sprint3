@@ -24,7 +24,7 @@
 }
 
 .icono {
-  width: 20%;
+  width: 15%;
 }
 .cards-rounded {
   border-radius: 10px;
@@ -107,5 +107,4 @@ button:hover {
     width: 80%;
     margin-left: 2rem;
   }
-  
 }
