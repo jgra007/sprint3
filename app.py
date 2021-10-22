@@ -7,7 +7,7 @@ app.secret_key = "mysecretkey"
 @app.route("/")
 def login():
     return render_template("login.html")
-   
+
 
 @app.route("/sessionsuperadmin", methods=["GET", "POST"])
 def sessionsuperadmin():
@@ -27,6 +27,8 @@ def sessionsuperadmin():
 
         if user == "Prueba" and password == "Prueba123":
             return render_template("superadmin.html")
+        elif user == "Usuario" and password == "Usuario123":
+             return redirect(url_for("user"))
         else:
             flash("Usuario y Contraseña No Validos ")
 
@@ -37,7 +39,7 @@ def sessionsuperadmin():
 
 @app.route("/manageuser", methods=["GET", "POST"])
 def manageuser():
-    return render_template("gestionar.html") 
+    return render_template("gestionar.html")
 
 
 @app.route("/adduser", methods=["GET", "POST"])
@@ -126,9 +128,11 @@ def adduser():
 def dashboard():
     return render_template("dashboard.html")
 
-@app.route("/pruebas") 
-def pruebas(): 
-  return render_template("pruebas.html")
+
+@app.route("/pruebas")
+def pruebas():
+    return render_template("pruebas.html")
+
 
 @app.route("/registeruser", methods=["GET", "POST"])
 def registeruser():
@@ -149,6 +153,13 @@ def infouser():
 def edituser():
     return "Usuario Editado Correctamente"
 
+@app.route("/calificacion",  methods=["GET", "POST"])
+def calificacion():
+    return render_template("calificacion.html")
+
+@app.route("/user",  methods=["GET", "POST"])
+def user():
+    return render_template("user.html")
 
 @app.route("/deleteuser", methods=["GET", "POST"])
 def deleteuser():
