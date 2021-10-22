@@ -13,7 +13,9 @@
 .texto {
   color: white;
 }
-
+.btn-d {
+  width: 5%;
+}
 .back {
   background: url(/static/images/dashbg.jpeg);
 
