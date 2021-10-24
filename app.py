@@ -165,6 +165,9 @@ def infouser():
 
 @app.route("/editarusuario", methods=["GET", "POST"])
 def edituser():
+    if request.method == "POST":
+        return "Usuario Actualizado Correctamente"
+    
     return render_template("editarusuario.html")
 
 @app.route("/calificacion",  methods=["GET", "POST"])
