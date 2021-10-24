@@ -146,12 +146,12 @@ def evaluationuser():
 
 @app.route("/infouser", methods=["GET", "POST"])
 def infouser():
-    return "Información del Usuario"
+    return render_template("infousuario.html")
 
 
-@app.route("/edituser", methods=["GET", "POST"])
+@app.route("/editarusuario", methods=["GET", "POST"])
 def edituser():
-    return "Usuario Editado Correctamente"
+    return render_template("editarusuario.html")
 
 @app.route("/calificacion",  methods=["GET", "POST"])
 def calificacion():
@@ -164,3 +164,7 @@ def user():
 @app.route("/deleteuser", methods=["GET", "POST"])
 def deleteuser():
     return "Usuario Eliminado Correctamente"
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host='0.0.0.0', port=5000)    
