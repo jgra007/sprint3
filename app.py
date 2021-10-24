@@ -146,7 +146,21 @@ def evaluationuser():
 
 @app.route("/infouser", methods=["GET", "POST"])
 def infouser():
-    return render_template("infousuario.html")
+    usuario = [
+        "001",
+        "Camilo",
+        "Noguera",
+        "18",
+        "Tecnico",
+        "100000",
+        "Departamento de Sistemas",
+        "12-02-2003",
+        "Indefinido",
+        "correo@gmail.com"
+        
+        
+    ]
+    return render_template("infousuario.html", data=usuario)
 
 
 @app.route("/editarusuario", methods=["GET", "POST"])
@@ -165,6 +179,9 @@ def user():
 def deleteuser():
     return "Usuario Eliminado Correctamente"
 
+@app.route("/vercomentario", methods=["GET", "POST"])
+def vercomentario():
+    return render_template("vercomentario.html")
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=5000)    
