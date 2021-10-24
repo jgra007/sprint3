@@ -39,7 +39,8 @@ def sessionsuperadmin():
 
 @app.route("/manageuser", methods=["GET", "POST"])
 def manageuser():
-    return render_template("gestionar.html")
+    if request.method == "POST":
+        return render_template("gestionar.html")
 
 
 @app.route("/adduser", methods=["GET", "POST"])
@@ -126,22 +127,20 @@ def adduser():
 
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
-    return render_template("dashboard.html")
-
-
-@app.route("/pruebas")
-def pruebas():
-    return render_template("pruebas.html")
+    if request.method == "POST":
+        return render_template("dashboard.html")
 
 
 @app.route("/registeruser", methods=["GET", "POST"])
 def registeruser():
-    return render_template("empleados.html")
+    if request.method == "POST":
+        return render_template("empleados.html")
 
 
 @app.route("/evaluationuser", methods=["GET", "POST"])
 def evaluationuser():
-    return render_template("evaluacion.html")
+    if request.method == "POST":
+        return render_template("evaluacion.html")
 
 
 @app.route("/infouser", methods=["GET", "POST"])
